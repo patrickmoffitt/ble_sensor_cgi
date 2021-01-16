@@ -8,11 +8,17 @@ query the data in JSON (with this project) and inspect it
 with [interactive data graphics](https://github.com/patrickmoffitt/ble_sensor_charts) powered by
 [Plotly](https://plotly.com/javascript/).
 
+Building
+--------
+This is a CMake project that requires cURL and libmagic.
+
+
 Installing the CGI
 ------------------
 As root, do the following;
 1. Copy the CGI binary you built (ble_sensor_cgi) with cmake into `/usr/lib/cgi-bin/` If you renamed the project in
-   CMakeLists.txt the binary will have a new name as well. You should reflect this change in 
+   CMakeLists.txt the binary will have a new name as well. You should reflect this URL change in the JavaScript of the
+   [data charting project]((https://github.com/patrickmoffitt/ble_sensor_charts))
 2. Enable the CGI module.
 ```bash
 sudo a2enmod cgi
